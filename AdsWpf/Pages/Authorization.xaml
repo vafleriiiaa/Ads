@@ -1,0 +1,37 @@
+﻿<Page x:Class="AdsWpf.Pages.Authorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AdsWpf.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Authorization">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Логин" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Label Content="Пароль" Grid.Row="1"  Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+        
+        <TextBox x:Name="TextBoxLogin" TextWrapping="Wrap"  Width="139" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="Введите логин" Grid.Column="1"/>
+
+        
+        <PasswordBox x:Name="PasswordBox"  Width="138" VerticalAlignment="Center" HorizontalAlignment="Left" PasswordChar="*" ToolTip="Введите пароль" Grid.Row="1" Grid.Column="1"/>
+
+        <Button Content="Вход" x:Name="ButtonEnter" Click="ButtonEnter_Click"  ToolTip="Кнопка входа" Height="36" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="1"/>
+        <Button Content="Регистрация" x:Name="ButtonRegister" Click="ButtonRegister_Click" ToolTip="Кнопка регистрации" Height="34" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1"/>
+
+    </Grid>
+</Page>
