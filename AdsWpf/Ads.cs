@@ -15,17 +15,17 @@ namespace AdsWpf
     public partial class Ads
     {
         public int AdID { get; set; }
+        public int UserID { get; set; }
         public System.DateTime PublishDate { get; set; }
         public string City { get; set; }
-        public int UserID { get; set; }
-        public int CategoryID { get; set; }
-        public string AdType { get; set; }
-        public string Status { get; set; }
+        public string Category { get; set; }
+        public string Type { get; set; }
+        public int Id_Status { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
     
-        public virtual Categories Categories { get; set; }
         public virtual User User { get; set; }
+        public virtual Status Status { get; set; }
     }
 }

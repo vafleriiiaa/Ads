@@ -43,18 +43,17 @@ namespace AdsWpf.Pages
                 }
 
                 MessageBox.Show("Пользователь найден");
-                NavigationService.Navigate(new Pages.AdsPage());
 
-                //switch (user.Role)
-                //{
-                //    case "администратор":
-                //        NavigationService.Navigate(new DirectorMenu());
-                //        break;
-                //    case "пользователь":
-                //        NavigationService.Navigate(new ManagerMenu());
-                //        break;
+                switch (user.Id_Role)
+                {
+                    case 1:
+                        NavigationService.Navigate(new AdsPage(user.UserID));
+                        break;
+                    case 2:
+                        NavigationService.Navigate(new AdminPage());
+                        break;
 
-                //}
+                }
             }
         }
 

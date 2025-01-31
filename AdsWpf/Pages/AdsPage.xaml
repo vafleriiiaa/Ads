@@ -5,10 +5,63 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AdsWpf.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="900"
       Title="AdsPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <TextBox Width="200" Margin="5" ToolTip="Введите для поиска" x:Name="SearchTextBox" TextChanged="SearchTextBox_TextChanged"/>
+            <ComboBox Width="200" Margin="5" ToolTip="Выберите порядок сортировки" x:Name="SortComboBox" SelectionChanged="SortComboBox_SelectionChanged">
+                <ComboBoxItem Content="По возрастанию" />
+                <ComboBoxItem Content="По убыванию" />
+            </ComboBox>
+            <CheckBox Content="Только мои посты" Margin="5" ToolTip="Фильтрация по моим постам" x:Name="RoleCheckBox" Checked="RoleCheckBox_Checked" Unchecked="RoleCheckBox_Unchecked"/>
+            <Button Content="Очистить фильтр" Width="150" Margin="5" ToolTip="Сбросить все фильтры" x:Name="ClearFilterButton" Click="ClearFilterButton_Click"/>
+            <Button Visibility="Hidden" Content="Добавить товар" Width="150" Margin="5" ToolTip="Добавить новый товар" x:Name="AddButton" Click="AddButton_Click" />
+            <Button Visibility="Hidden" Content="Удалить товар" Width="150" Margin="5" ToolTip="Удалить выбранный товар" x:Name="DelButton" Click="DelButton_Click"  />
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Общая выручка:"/>
+                <TextBlock x:Name="prof"/>
+                <TextBlock Text="Р"/>
+            </StackPanel>
+        </WrapPanel>
+        <DataGrid Grid.Row="1" Name="DataGridAds" AutoGenerateColumns="False" IsReadOnly="True" Margin="10" IsVisibleChanged="DataGridAds_IsVisibleChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Пользователь" Binding="{Binding User.Username}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Дата публикации" Binding="{Binding PublishDate}" Width="*"/>
+                <DataGridTextColumn Header="Город" Binding="{Binding City}" Width="*"/>
+                <DataGridTextColumn Header="Категория" Binding="{Binding Category}" Width="*"/>
+                <DataGridTextColumn Header="Тип" Binding="{Binding Type}" Width="*"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status.Name}" Width="*"/>
+
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding Price}" Width="*"/>
+
+                <DataGridTemplateColumn Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="ButtonEdit" Content="Редактировать" Click="ButtonEdit_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

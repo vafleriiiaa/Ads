@@ -30,8 +30,8 @@
         
         <PasswordBox x:Name="PasswordBox"  Width="138" VerticalAlignment="Center" HorizontalAlignment="Left" PasswordChar="*" ToolTip="Введите пароль" Grid.Row="1" Grid.Column="1"/>
 
-        <Button Content="Вход" x:Name="ButtonEnter" Click="ButtonEnter_Click"  ToolTip="Кнопка входа" Height="36" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="1"/>
-        <Button Content="Регистрация" x:Name="ButtonRegister" Click="ButtonRegister_Click" ToolTip="Кнопка регистрации" Height="34" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1"/>
+        <Button Content="Вход" x:Name="ButtonEnter" Click="ButtonEnter_Click"  ToolTip="Кнопка входа" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="1"/>
+        <Button Content="Регистрация" x:Name="ButtonRegister" Click="ButtonRegister_Click" ToolTip="Кнопка регистрации" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1"/>
 
     </Grid>
 </Page>

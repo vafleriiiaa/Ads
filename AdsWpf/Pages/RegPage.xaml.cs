@@ -94,6 +94,7 @@ namespace AdsWpf.Pages
                 Username = TextBoxFIO.Text,
                 Login = TextBoxLogin.Text,
                 Password = PasswordBox.Password,
+                TotalProfit = 0
                 
             };
             db.User.Add(userObject);

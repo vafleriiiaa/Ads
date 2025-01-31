@@ -12,23 +12,18 @@ namespace AdsWpf
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Role
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
+        public Role()
         {
-            this.Ads = new HashSet<Ads>();
+            this.User = new HashSet<User>();
         }
     
-        public int UserID { get; set; }
-        public string Login { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
         public int Id_Role { get; set; }
-        public Nullable<decimal> TotalProfit { get; set; }
+        public string Name_Role { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ads> Ads { get; set; }
-        public virtual Role Role { get; set; }
+        public virtual ICollection<User> User { get; set; }
     }
 }

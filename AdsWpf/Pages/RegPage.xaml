@@ -14,7 +14,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-
+            
             <RowDefinition></RowDefinition>
 
         </Grid.RowDefinitions>
@@ -30,17 +30,17 @@
         <Label Content="Подтвердите пароль" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <Label Content="Введите ФИО" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
 
-        <TextBox x:Name="TextBoxLogin" TextWrapping="Wrap"  Width="139" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="Введите логин" Grid.Column="1"/>
+        <TextBox x:Name="TextBoxLogin" TextWrapping="Wrap"  Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="Введите логин" Grid.Column="1"/>
 
-        <PasswordBox x:Name="PasswordBox" Width="138" VerticalAlignment="Center" HorizontalAlignment="Left" PasswordChar="*" ToolTip="Введите пароль" Grid.Row="1" Grid.Column="1"/>
+        <PasswordBox x:Name="PasswordBox" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" PasswordChar="*" ToolTip="Введите пароль" Grid.Row="1" Grid.Column="1"/>
 
-        <PasswordBox x:Name="PasswordBoxAgain" Width="138" VerticalAlignment="Center" HorizontalAlignment="Left" PasswordChar="*" ToolTip="Введите пароль еще раз" Grid.Row="2" Grid.Column="1"/>
+        <PasswordBox x:Name="PasswordBoxAgain" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" PasswordChar="*" ToolTip="Введите пароль еще раз" Grid.Row="2" Grid.Column="1"/>
 
 
-        <TextBox x:Name="TextBoxFIO" TextWrapping="Wrap"  Width="139" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="Введите ФИО" Grid.Column="1"  Grid.Row="3"/>
+        <TextBox x:Name="TextBoxFIO" TextWrapping="Wrap"  Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTip="Введите ФИО" Grid.Column="1"  Grid.Row="3"/>
 
-        <Button Content="Отмена" x:Name="ButtonCancel" Click="ButtonCancel_Click"  ToolTip="Кнопка отмены" Height="36" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="0"/>
-        <Button Content="Регистрация" x:Name="ButtonRegister" Click="ButtonRegister_Click" ToolTip="Кнопка регистрации" Height="34" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="5" Grid.Column="1"/>
+        <Button Content="Отмена" x:Name="ButtonCancel" Click="ButtonCancel_Click"  ToolTip="Кнопка отмены" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="0"/>
+        <Button Content="Регистрация" x:Name="ButtonRegister" Click="ButtonRegister_Click" ToolTip="Кнопка регистрации" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1"/>
 
     </Grid>
 </Page>

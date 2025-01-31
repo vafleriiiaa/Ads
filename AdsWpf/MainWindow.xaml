@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdsWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="900">
     <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="430"/>
             <RowDefinition/>
 
         </Grid.RowDefinitions>
 
-        <Frame x:Name="MainFrame" Content="" Source="Pages/Authorization.xaml" NavigationUIVisibility="Hidden" Grid.Row="1" Navigated="Frame_Navigated" Width="801"/>
-        <Button x:Name="Back" Content="Назад" Grid.Row="0" HorizontalAlignment="Left" Width="62" Click="Back_Click"/>
+        <Frame x:Name="MainFrame" Content="" Source="Pages/Authorization.xaml" NavigationUIVisibility="Hidden" Grid.Row="1" Navigated="Frame_Navigated"/>
+        <Button x:Name="Back" Content="Назад" Grid.Row="0" HorizontalAlignment="Left"  Click="Back_Click"/>
 
 
     </Grid>

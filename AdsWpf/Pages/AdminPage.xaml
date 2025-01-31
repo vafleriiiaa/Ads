@@ -1,0 +1,43 @@
+﻿<Page x:Class="AdsWpf.Pages.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AdsWpf.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="850"
+      Title="AdminPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="350*"/>
+            <RowDefinition Height="120*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0" Name="DataGridUser" AutoGenerateColumns="False" IsReadOnly="True" Margin="10" IsVisibleChanged="DataGrid_IsVisibleChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Логин" Binding="{Binding Login}" Width="*"/>
+                <DataGridTextColumn Header="Пароль" Binding="{Binding Password}" Width="*"/>
+                <DataGridTextColumn Header="Роль" Binding="{Binding Role.Name_Role}" Width="*"/>
+                <DataGridTextColumn Header="ФИО" Binding="{Binding Username}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTemplateColumn Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="ButtonEdit" Content="Редактировать" Click="ButtonEdit_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Grid.Row="1" Name="ButtonAdd" Content="Добавить" ToolTip="Добавить" HorizontalAlignment="Left" Click="ButtonAdd_Click"/>
+        <Button Grid.Row="1" Name="ButtonDel" Content="Удалить" ToolTip="Удалить" HorizontalAlignment="Right" Click="ButtonDel_Click"/>
+
+    </Grid>
+</Page>

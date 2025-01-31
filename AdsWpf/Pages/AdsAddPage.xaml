@@ -1,0 +1,63 @@
+﻿<Page x:Class="AdsWpf.Pages.AdsAddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AdsWpf.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="900"
+      Title="AdsAddPage">
+
+    <Grid Name="DataGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="47"/>
+            <RowDefinition Height="49"/>
+            <RowDefinition Height="44"/>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="61"/>
+            <RowDefinition Height="27*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="269*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="99"/>
+            <ColumnDefinition Width="254"/>
+            <ColumnDefinition Width="154*"/>
+            <ColumnDefinition Width="32*"/>
+        </Grid.ColumnDefinitions>
+
+        <WrapPanel Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <StackPanel Orientation="Vertical" >
+                <TextBlock Text="Категория"  TextAlignment="Left" Height="17" />
+                <TextBox TextWrapping="Wrap" Name="box7" IsReadOnly="True" Width="176" Text="{Binding Category}" ToolTip="Категория товара" HorizontalAlignment="Left" FontSize="18" FontWeight="Bold"  Grid.ColumnSpan="2"  />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" >
+                <TextBlock Text="Тип товара"  TextAlignment="Left" Height="17" />
+                <TextBox Name="box8" IsReadOnly="True" TextAlignment="Left" Width="170" TextWrapping="Wrap" Text="{Binding Type}" ToolTip="Тип товара" HorizontalAlignment="Left" FontSize="18" FontWeight="Bold"  Grid.ColumnSpan="2" />
+            </StackPanel>
+
+        </WrapPanel>
+        <Button Visibility="Hidden" Name="SoldBut"  Grid.Row="1" Grid.Column="5" Content="Закрыть пост" ToolTip="нажмите чтобы закрыть объявление" Click="SoldBut_Click" />
+        <Button Visibility="Hidden" Name="SaveBut"  Grid.Row="2" Grid.Column="5" Content="Сохранить изменения" ToolTip="Сохранить изменения" Click="SaveButton_Click"  Grid.RowSpan="2"  />
+        <Button Visibility="Hidden" Name="AddBut"  Grid.Row="2" Grid.Column="5" Content="Сохранить" ToolTip="Сохранить новый пост" Click="SaveButton_Click" Grid.RowSpan="2"  />
+
+        <TextBox Text="{Binding Status.Name}" Grid.Row="1" IsReadOnly="True" Name="boxStatus" Grid.Column="4"  FontSize="18" VerticalAlignment="Center"  ToolTip="Статус товара" Height="38" Margin="16,0,16,0"/>
+        <TextBox Name="box1" IsReadOnly="True" TextAlignment="Left" Grid.Column="4" Grid.Row="2" FontSize="18" Text="{Binding PublishDate}" VerticalAlignment="Center" ToolTip="Дата публикации" Height="38" Margin="16,0,16,0"  />
+        <TextBox Name="box2" IsReadOnly="True" TextAlignment="Left"  Grid.Row="3" Grid.Column="4"  FontSize="18" Text="{Binding Title}"  VerticalAlignment="Center" ToolTip="Название поста" Height="38" Margin="16,0,16,0" />
+        <TextBox Name="box3" IsReadOnly="True" TextAlignment="Left"  Grid.Row="4" Grid.Column="4"  FontSize="18" Text="{Binding City}" VerticalAlignment="Center" ToolTip="Город" Height="38" Margin="16,0,16,0" />
+        <TextBox Name="box4" IsReadOnly="True" TextAlignment="Left"  Grid.Row="5" Grid.Column="4"  FontSize="18" Text="{Binding Price}" VerticalAlignment="Center" ToolTip="Цена" Height="38" Margin="16,0,16,0" />
+        <TextBox Name="box5" IsReadOnly="True" TextAlignment="Left"  Grid.Row="6" Grid.Column="4"  FontSize="18" Text="{Binding Description}" ToolTip="Описание товара" Height="NaN" TextWrapping="Wrap" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="16,16,16,16"    />
+        <!--текстовые подсказки-->
+        <TextBlock x:Name="stat" Text="Статус" Grid.Column="3" Grid.Row="1" TextAlignment="Center" Margin="0,14,0,13" />
+        <TextBlock Text="Дата" Grid.Column="3" Grid.Row="2" TextAlignment="Center" Margin="0,14,0,14" />
+        <TextBlock Text="Название" Grid.Column="3" Grid.Row="3" TextAlignment="Center" Margin="0,13,0,13" />
+        <TextBlock Text="Город" Grid.Column="3" Grid.Row="4" TextAlignment="Center" Margin="0,13,0,13" />
+        <TextBlock Text="Цена" Grid.Column="3" Grid.Row="5" TextAlignment="Center" Margin="0,13,0,13" />
+        <TextBlock Text="Описание" Grid.Column="3" Grid.Row="6" TextAlignment="Center" Margin="0,13,0,9" />
+
+    </Grid>
+</Page>
